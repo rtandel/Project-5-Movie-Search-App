@@ -18,9 +18,9 @@ $(document).ready(function() {
       $.each( data.Search, function(i, movie) {
         // If the poster doesn't exist or can't be found.
         if (movie.Poster === "N/A") {
-          movieHTML += '<li><div class="poster-wrap"><i class="material-icons poster-placeholder">crop_original</i></div><span class="movie-title">'+movie.Title+'</span><span class="movie-year">'+movie.Year +'</span></li>';
+          movieHTML += '<li><a href="http://www.imdb.com/title/'+movie.imdbID+'/"><div class="poster-wrap"><i class="material-icons poster-placeholder">crop_original</i></div><span class="movie-title">'+movie.Title+'</span><span class="movie-year">'+movie.Year +'</span></a></li>';
         } else {
-          movieHTML += '<li><div class="poster-wrap"><img class="movie-poster" src="'+movie.Poster+'"></div><span class="movie-title">'+movie.Title+'</span><span class="movie-year">'+movie.Year +'</span></li>';
+          movieHTML += '<li><a href="http://www.imdb.com/title/'+movie.imdbID+'/"><div class="poster-wrap"><img class="movie-poster" src="'+movie.Poster+'"></div><span class="movie-title">'+movie.Title+'</span><span class="movie-year">'+movie.Year +'</span></a></li>';
         }
       });
       // If no movies were found.
